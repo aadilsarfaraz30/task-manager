@@ -1,0 +1,6 @@
+export const TaskDetailsActionType = {
+    GET_DETAILS: 'GET_DETAILS',
+    ADD_DETAILS: 'ADD_DETAILS',
+    EDIT_DETAILS: 'EDIT_DETAILS',
+    FILTERED: 'FILTERED'
+}

@@ -1,0 +1,19 @@
+.modal-style{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  box-shadow: 24px;
+  padding: 40px;
+  border: none;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-style {
+    width: 310px; 
+    padding: 25px;
+  }
+}
