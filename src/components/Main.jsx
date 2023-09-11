@@ -18,11 +18,13 @@ const Main = () => {
     }
   }, [taskData, filtered]);
 
+
+  
   return (
     <div>
       <div className='flex'></div>
       <div className='flex flex-col gap-4'>
-        {data.map((item) => (
+        {data?.length > 0 ? data?.map((item) => (
           <Card
             key={item.id}
             id={item.id}
@@ -30,7 +32,9 @@ const Main = () => {
             description={item.description}
             status={item.status}
           />
-        ))}
+        )) : <div className='flex justify-center items-center '>
+            <h1>No Data Available</h1>
+          </div>}
       </div>
     </div>
   );

@@ -3,13 +3,13 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import IconButton from '@mui/material/IconButton';
-import { FormControlLabel, FormGroup, Switch } from '@mui/material';
+// import { FormControlLabel, FormGroup, Switch } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { darkTheme, lightTheme } from '../store/action/themeAction';
+// import { darkTheme, lightTheme } from '../store/action/themeAction';
 import { getFilter } from '../store/action/taskDetailsAction';
 
 const Header = () => {
-  const [checked, setChecked] = useState(false);
+  // const [checked, setChecked] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const dispatch = useDispatch()
@@ -32,21 +32,21 @@ const Header = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleSwitchChange = (event) => {
-    setChecked(event.target.checked);
-  };
+  // const handleSwitchChange = (event) => {
+  //   setChecked(event.target.checked);
+  // };
 
-  useEffect(() => {
-    if(checked) {
-      dispatch(darkTheme())
-    }
-    else{
-      dispatch(lightTheme())
-    }
-  },[checked])
+  // useEffect(() => {
+  //   if(checked) {
+  //     dispatch(darkTheme())
+  //   }
+  //   else{
+  //     dispatch(lightTheme())
+  //   }
+  // },[checked,dispatch])
 
   return (
-    <div className={`h-[50px] shadow-md transform  flex items-center justify-between px-8 ${checked ? `bg-[#1F1F1F]` : `bg-[white]`}`}>
+    <div className={`h-[50px] shadow-md transform  flex items-center justify-between px-8 bg-white`}>
       <div className='text-[1.125rem] text-[#222222] font-bold'>
         Task Manager
       </div>
